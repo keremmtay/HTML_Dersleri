@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Formlar aslında çok geniş bir konu fakat konunun temelini burada öğreneceğiz.
+    Formlar server temelli uygulamalarda kullanılır. Yani kullanıcıdan almış olduğumuz bilgileri server'daki yazılıma göndererek, server'da işlenmesini sağlarız. 
+
+    Sayfamızda tanımladığımız form tag'imizde girdiğimiz bilgileri action vasıtasıyla tanımlanan adrese göndeririz. Örneğin bir sayfaya girdik ve kayıt işlemleri yapacağız, bilgileri girdikten sonra, bunları server tarafına yani backend tarafına göndermek için kullandığımız tag'lerdir.
+ -->
+
+<form action="kayit.php">
+
+    <div>
+        <label for="Name">Adınız</label>
+        <input type="text" id="Name">
+    </div>
+    <br>
+    <div>
+
+        <label for="Surname" width = "1000px">Soyadınız</label>
+        <input type="text" id="Surname" width="1000px">
+
+    </div>
+
+
+
+
+<!-- radio button için de aşağıdaki gibi bir input kulllanmamız gerekecek
+Örneğin tatil için tercih ettiğimiz bölge neresidir diye sorulan soruya karşılık tek bir cevap alacaksak, radio button kullanmamız gerekecek -->
+
+
+<!-- radio button'ları gruplandırmak için name özelliğine aynı isimleri vermek gerekiyor. -->
+
+<!-- name aynı zamanda seçilen verinin server tarafında hangi değişken tarafından yakalanacağını belirttiğimiz isim olmalı. Yani backend tarafındaki değişkenin ismini vermemiz gerekir. -->
+
+<div>
+
+    <p>Tatil için tercih ettiğiniz bölge neresidir?</p>
+    <input type="radio" name="bolge" id="Akdeniz">
+    <label for="Akdeniz">Akdeniz</label>
+
+    <input type="radio" name="bolge" id="Karadeniz">
+    <label for="Karadeniz">Karadeniz</label>
+
+    <input type="radio" name="bolge" id="Ege">
+    <label for="Ege">Ege</label>
+
+    <input type="radio" name="bolge" id="Köyüm">
+    <label for="Köyüm">Köyüm</label>
+
+</div>
+
+<br>
+
+<div>
+    <p>Tatil için tercih ettiğiniz Şehir neresidir?</p>
+
+    <input type="radio" name="sehir" id="Antalya">
+    <label for="Antalya">Antalya</label>
+
+    <input type="radio" name="sehir" id="Rize">
+    <label for="Rize">Rize</label>
+
+    <input type="radio" name="sehir" id="Muğla">
+    <label for="Muğla">Muğla</label>
+</div>
+
+<!-- Eğer birden fazla seçim söz konusuysa bu durumda checkbox kullanmamız gerekecek. -->
+
+<div>
+    <p>Yolculuk için hangi araçları tercih edersiniz?</p>
+    <input type="checkbox" name="yolculuk" id="Araba">
+    <label for="Araba">Araba</label>
+
+    <input type="checkbox" name="yolculuk" id="Tren">
+    <label for="Tren">Tren</label>
+
+    <input type="checkbox" name="yolculuk" id="Uçak">
+    <label for="Uçak">Uçak</label>
+
+    <input type="checkbox" name="yolculuk" id="Otobüs">
+    <label for="Otobüs">Otobüs</label>
+
+</div>
+
+
+<!-- TextArea: Input ile sadece tek satırda bilgi girişi yapılabilirken TextArea ile birden fazla satırda bilgi girişi yapabiliriz. -->
+
+<div>
+    <label for="Adres">Adres</label>
+    <textarea name="Adres" id="Adres" cols="30" rows="10" style="resize: none;"></textarea>
+</div>
+<br>
+
+
+<!-- select option kullanımı -->
+
+<div>
+    <label for="sehir">Şehir</label>
+    <select name="sehir" id="sehir">
+        <!-- İstanbul verisi kullanıcıya görünecek olan veridir. Value ise server'a gönderilecek olan veridir. -->
+        <option value="34">İstanbul</option>
+        <option value="06">Ankara</option>
+        <option value="16">Bursa</option>
+        <option value="35">İzmir</option>
+    </select>
+</div>
+
+<div>
+    <!-- mail adresi girmek için: -->
+    <label for="email">E-Posta</label>
+    <input type="email" name="email" id="email">
+</div>
+
+<div>
+    <!-- mail adresi girmek için: -->
+    <label for="sifre">Şifreni</label>
+    <input type="password" name="sifre" id="sifre">
+</div>
+
+<br>
+
+<!-- tarih bilgisi almak için -->
+<div>
+    <label for="birthday">Doğum Tarihiniz</label>
+    <input type="date" name="birthday" id="birthday">
+</div>
+
+<br>
+<br>
+<div>
+    <label for="phone">Telefon numaranınızı girin</label>
+    <input type="tel" name="phone" id="phone" placeholder="555-123-45-67" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+    <br>
+    <small>Format:555-123-45-67</small>
+</div>
+
+<br>
+
+<div>
+    <label for="sayi">Adet</label>
+    <input type="number" name="sayi" id="sayi" min="1" max="5">
+</div>
+
+<div>
+    <label for="renk">Favori renginiz</label>
+    <input type="color" name="renk" id="renk" value="#ff0000">
+</div>
+
+
+
+
+
+
+
+
+
+
+<div>
+    <button type="submit">Kaydet</button>
+    <button type="reset">Reset</button>
+</div>
+
+
+</form>
+
+</body>
+</html>

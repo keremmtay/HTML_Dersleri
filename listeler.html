@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Sıralı ve sırasız olarak 2 farklı liste oluşturabiliriz. 
+ 
+ul = unorder list - sırasız liste
+
+ol = order list - sıralı liste
+
+Sırasız liste oluşturmak istiyorsak aşağıdaki gibi <ul> </ul> tag'leri arasında <li> </li> taglerini kullanarak oluşturabiliriz
+
+<ul> 
+    <li> </li>
+    <li> </li>
+    <li> </li>
+    <li> </li>
+</ul>
+
+
+Sıralı liste oluşturmak istiyorsak <ol> </ol> tagleri arasında <li> </li> taglerini kullanmamız gerekiyor.
+
+<ol> 
+    <li> </li>
+    <li> </li>
+    <li> </li>
+    <li> </li>
+</ol>
+
+-->
+
+<ul>
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ul>
+
+<br><hr>
+
+<ul style="list-style-type: circle;">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ul>
+
+<br><hr>
+
+<ul style="list-style-type: none;">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ul>
+
+<h5>Sıralı listeler</h5>
+
+<ol>
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ol>
+
+<ol style="list-style-type: upper-alpha;">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ol>
+
+<ol style="list-style-type: lower-alpha;">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ol>
+
+<ol type="1" start="10">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ol>
+
+<ol type="a" start="10">
+    <li>Ankara</li>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+</ol>
+
+<br><hr>
+
+
+<!-- İç içe listeler de tanımlanabilir. Burada önemli olan hangi liste elemanın alt elemanı olacaksa onun altında/içinde yeni bir liste olarak tanımlanmalı. -->
+
+<ul>
+    <li>Ankara</li>
+    <li>İstanbul
+        <ul>
+            <li>Kadıköy</li>
+            <li>Beşiktaş</li>
+            <li>Sultanbeyli</li>
+        </ul>
+    </li>
+    <li>İzmir</li>
+</ul>
+
+<!-- <dl> DescriptList isimli bir lst türü daha var. Kullanımı aşağıdaki gibidir. -->
+
+<!-- Önce <dl> tag'lerini oluşturuyoruz. <dt></dt> her terimi bu taglerin arasına alıyoruz. Açıklamasını da <dd></dd> tagleri arasına yazıyoruz. -->
+
+<dl>
+    <dt>Sıcak İçecekler</dt>
+        <dd>Çay</dd>
+        <dd>Kahve</dd>
+        <dd>Süt</dd>
+    <dt>Soğuk İçecekler</dt>
+        <dd>Soda</dd>
+        <dd>Ayran</dd>
+        <dd>Su</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
